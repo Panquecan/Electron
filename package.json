@@ -1,0 +1,11 @@
+{
+  "name": "minhas-coisas-electron",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "projetos/*"
+  ],
+  "devDependencies": {
+    "electron": "^45.5.0"
+  }
+}
