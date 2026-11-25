@@ -1,6 +1,24 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow } = require("electron");
 
-app.whenReady().then(() => {
-  const janela = new BrowserWindow({ width: 800, height: 600 });
-  janela.loadFile('index.html');
+function createWindow() {
+  const win = new BrowserWindow({
+    width: 292,
+    height: 430,
+    resizable: false,
+    maximizable: false,
+    fullscreenable: false,
+    frame: false, 
+    transparent: false,
+    webPreferences: {
+      contextIsolation: true
+    }
+  });
+
+  win.loadFile("index.html");
+}
+
+app.whenReady().then(createWindow);
+
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") app.quit();
 });
