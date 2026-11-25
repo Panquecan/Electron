@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -7,13 +9,24 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  background: pink;
   user-select: none;
   -webkit-app-region: drag;
+  background-image: url(assets/outer-frame-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
 
 .app {
-  padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 13.375rem;
+    padding: 1rem 0.625rem;
 }
 
 button,
@@ -22,4 +35,72 @@ textarea,
 select {
   -webkit-app-region: no-drag;
   cursor: pointer;
+}
+
+.titulo{
+    display: flex;
+    width: 157px;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.25rem 0.625rem;
+
+    border-radius: 6.25rem;
+    border: 1px solid #C079FF;
+    background: rgba(210, 164, 255, 0.4);
+
+    color: white;
+    font-family: "Pixelify Sans";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#calendario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 11.25rem;
+    height: 10.0625rem;
+      background-image: url(assets/inner-frame-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#dia{
+    color: white;
+    text-align: center;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #B58CD9;
+    font-family: "Press Start 2P";
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.15rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 3rem;
+    width: 11.25rem;
+}
+
+#mes{
+    color: rgb(210, 118, 220);
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #B58CD9;
+    font-family: "Pixelify Sans";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0.3rem;
+    width: 8.125rem;
+        display: flex;
+    justify-content: center;
 }
